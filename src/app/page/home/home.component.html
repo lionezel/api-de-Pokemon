@@ -43,13 +43,18 @@
       [src]="item.pic"
       class="card-img-top"
       alt="..."
-      style="background-color: aliceblue; border-radius: 15px; cursor: pointer"
+      style="
+        background-color: aliceblue;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.5s ease;
+      "
     />
     <div class="card-body">
       <h5 class="card-title" style="font-size: 15px">#{{ item.id }}</h5>
       <h2 class="card-title">{{ item.name }}</h2>
 
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a class="btn btn-primary"></a>
     </div>
   </div>
 </div>

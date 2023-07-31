@@ -16,3 +16,8 @@ export interface Pokemon {
     name: string;
     pic: string;
 }
+
+export interface PokeType {
+    name: string;
+  }
+  

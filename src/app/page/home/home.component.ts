@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon } from 'src/app/interfaces/pokemon.interfaces';
+import { PokeType, Pokemon } from 'src/app/interfaces/pokemon.interfaces';
 import { PokemonesService } from 'src/app/services/pokemones.service';
 
 @Component({
@@ -12,13 +12,17 @@ export class HomeComponent implements OnInit {
   public page: number = 0;
   public search: string = '';
 
+
   constructor(private _pokemonServies: PokemonesService) {}
 
   ngOnInit(): void {
     this._pokemonServies.getAllPokemons().subscribe((pokemons) => {
       this.pokemons = pokemons;
     });
+
+
   }
+
 
   nextPage() {
     this.page += 20;

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {
   FetchAllPokemonResponse,
+  PokeType,
   Pokemon,
 } from '../interfaces/pokemon.interfaces';
 
@@ -21,21 +22,24 @@ export class PokemonesService {
       .pipe(map(this.transformSmallPokemonIntoPokemon));
   }
 
+  
   private transformSmallPokemonIntoPokemon(
     resp: FetchAllPokemonResponse
-  ): Pokemon[] {
-    const pokemonList: Pokemon[] = resp.results.map((poke) => {
+    ): Pokemon[] {
+      const pokemonList: Pokemon[] = resp.results.map((poke) => {
       const urlArr = poke.url.split('/');
       const id = urlArr[6];
       const pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
-
-      return { 
+      
+      return {
         id,
         pic,
         name: poke.name,
       };
     });
-
+    
     return pokemonList;
   }
+
+ 
 }
