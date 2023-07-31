@@ -19,4 +19,9 @@ export class HomeComponent implements OnInit {
       this.pokemons = pokemons;
     });
   }
+
+  onSeasrchPokemon(search: string) {
+    this.page = 0;
+    this.search = search;
+  }
 }

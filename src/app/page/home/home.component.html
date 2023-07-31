@@ -1,5 +1,13 @@
 <p>home works!</p>
 
+<input
+  type="text"
+  class="form-control mb-2"
+  placeholder="Buscar pokemon"
+  #txtSearch
+  (keyup)="onSeasrchPokemon(txtSearch.value)"
+/>
+
 <div
   class="container"
   style="
@@ -10,14 +18,19 @@
   "
 >
   <div
-    class="card"
-    style="width: 18rem"
+    class=""
+    style="width: 100%"
     *ngFor="let item of pokemons | filtro : page : search"
   >
-    <img [src]="item.pic" class="card-img-top" alt="..." />
+    <img
+      [src]="item.pic"
+      class="card-img-top"
+      alt="..."
+      style="background-color: aliceblue; border-radius: 15px; cursor: pointer"
+    />
     <div class="card-body">
-      <h5 class="card-title">#{{ item.id }}</h5>
-      <h5 class="card-title">#{{ item.name }}</h5>
+      <h5 class="card-title" style="font-size: 15px">#{{ item.id }}</h5>
+      <h2 class="card-title">{{ item.name }}</h2>
 
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
