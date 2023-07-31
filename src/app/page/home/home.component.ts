@@ -20,6 +20,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  nextPage() {
+    this.page += 20;
+  }
+
+  prevPage() {
+    if (this.page > 0) {
+      this.page -= 20;
+    }
+  }
+
   onSeasrchPokemon(search: string) {
     this.page = 0;
     this.search = search;

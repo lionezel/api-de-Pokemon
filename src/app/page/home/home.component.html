@@ -1,11 +1,28 @@
 <p>home works!</p>
 
+<button
+  class="btn btn-primary"
+  (click)="prevPage()"
+  style="position: absolute; left: 12%; display: flex"
+>
+  Anteriores
+</button>
+<button
+  class="btn btn-primary"
+  (click)="nextPage()"
+  [disabled]="(pokemons | filtro : page : search).length == 0"
+  style="position: absolute; left: 80%; display: flex"
+>
+  Siguentes
+</button>
+
 <input
   type="text"
   class="form-control mb-2"
-  placeholder="Buscar pokemon"
+  placeholder="Buscar pokemon...."
   #txtSearch
   (keyup)="onSeasrchPokemon(txtSearch.value)"
+  style="width: 50%; margin-left: 25%; border-radius: 20px"
 />
 
 <div
@@ -19,7 +36,7 @@
 >
   <div
     class=""
-    style="width: 100%"
+    style="width: 100%; margin-left: 40%"
     *ngFor="let item of pokemons | filtro : page : search"
   >
     <img
