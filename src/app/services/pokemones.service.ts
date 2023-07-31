@@ -18,8 +18,7 @@ export class PokemonesService {
   getAllPokemons(): Observable<Pokemon[]> {
     return this._http
       .get<FetchAllPokemonResponse>(`${this.baseURL}/pokemon?limit=1500`)
-      .pipe(
-        map(this.transformSmallPokemonIntoPokemon));
+      .pipe(map(this.transformSmallPokemonIntoPokemon));
   }
 
   private transformSmallPokemonIntoPokemon(
