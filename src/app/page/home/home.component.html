@@ -1,11 +1,25 @@
 <p>home works!</p>
 
-<tbody>
-  <tr *ngFor="let item of pokemons | filtro : page : search">
-    <td>{{ item.id }}</td>
-    <td>{{ item.name }}</td>
-    <td>
-      <img [src]="item.pic" alt="" />
-    </td>
-  </tr>
-</tbody>
+<div
+  class="container"
+  style="
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 20px;
+  "
+>
+  <div
+    class="card"
+    style="width: 18rem"
+    *ngFor="let item of pokemons | filtro : page : search"
+  >
+    <img [src]="item.pic" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">#{{ item.id }}</h5>
+      <h5 class="card-title">#{{ item.name }}</h5>
+
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
