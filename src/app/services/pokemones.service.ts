@@ -11,7 +11,7 @@ import {
   providedIn: 'root',
 })
 export class PokemonesService {
-  private baseURL: string = 'https://pokeapi.co/api/v2/';
+  private baseURL: string = 'https://pokeapi.co/api/v2';
 
   constructor(private _http: HttpClient) {}
 
@@ -29,7 +29,7 @@ export class PokemonesService {
       const id = urlArr[6];
       const pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
-      return {
+      return { 
         id,
         pic,
         name: poke.name,
