@@ -12,17 +12,18 @@ export class HomeComponent implements OnInit {
   public page: number = 0;
   public search: string = '';
 
+  constructor(
+    private _pokemonServies: PokemonesService,
+  ) {
 
-  constructor(private _pokemonServies: PokemonesService) {}
+  }
 
   ngOnInit(): void {
     this._pokemonServies.getAllPokemons().subscribe((pokemons) => {
       this.pokemons = pokemons;
+      console.log(this.pokemons);
     });
-
-
   }
-
 
   nextPage() {
     this.page += 20;

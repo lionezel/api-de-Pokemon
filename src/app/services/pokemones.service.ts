@@ -28,12 +28,13 @@ export class PokemonesService {
     ): Pokemon[] {
       const pokemonList: Pokemon[] = resp.results.map((poke) => {
       const urlArr = poke.url.split('/');
-      const id = urlArr[6];
-      const pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
-      
+      const id = urlArr[6] ;
+      const pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
+
       return {
         id,
         pic,
+
         name: poke.name,
       };
     });
@@ -41,5 +42,14 @@ export class PokemonesService {
     return pokemonList;
   }
 
+  getAllPokemon(id: any): Observable<any> {
+    return this._http
+      .get(`${this.baseURL}/pokemon/${id}`)
+    console.log(this.getAllPokemon)   
+  }
+  
+
+
  
 }
+ 

@@ -35,7 +35,6 @@
   "
 >
   <div
-    class=""
     style="width: 100%; margin-left: 40%"
     *ngFor="let item of pokemons | filtro : page : search"
   >
@@ -43,11 +42,13 @@
       [src]="item.pic"
       class="card-img-top"
       alt="..."
+      routerLink="/inicio/{{ item.id }}" 
       style="
         background-color: aliceblue;
         border-radius: 15px;
         cursor: pointer;
         transition: 0.5s ease;
+        height: 70%;
       "
     />
     <div class="card-body">
