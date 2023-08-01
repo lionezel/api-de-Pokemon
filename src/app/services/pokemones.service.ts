@@ -22,13 +22,12 @@ export class PokemonesService {
       .pipe(map(this.transformSmallPokemonIntoPokemon));
   }
 
-  
   private transformSmallPokemonIntoPokemon(
     resp: FetchAllPokemonResponse
-    ): Pokemon[] {
-      const pokemonList: Pokemon[] = resp.results.map((poke) => {
+  ): Pokemon[] {
+    const pokemonList: Pokemon[] = resp.results.map((poke) => {
       const urlArr = poke.url.split('/');
-      const id = urlArr[6] ;
+      const id = urlArr[6];
       const pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
 
       return {
@@ -38,18 +37,11 @@ export class PokemonesService {
         name: poke.name,
       };
     });
-    
+
     return pokemonList;
   }
 
-  getAllPokemon(id: any): Observable<any> {
-    return this._http
-      .get(`${this.baseURL}/pokemon/${id}`)
-    console.log(this.getAllPokemon)   
+  getAllPokemon(id: number): Observable<any> {
+    return this._http.get(`${this.baseURL}/pokemon/${id}`);
   }
-  
-
-
- 
 }
- 

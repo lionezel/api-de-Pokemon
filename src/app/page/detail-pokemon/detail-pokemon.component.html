@@ -1,1 +1,230 @@
 <p>detail-pokemon works!</p>
+
+<div class="container" *ngIf="detail_arr" style="border: 1px solid #111">
+  <h3 style="font-size: 200px; font-weight: 800; color: #91baab">
+    #{{ detail_arr.id }}
+  </h3>
+  <div style="display: flex; margin-left: 20%">
+    <h2 style="margin-right: 70px; font-size: 80px">{{ detail_arr.name }}</h2>
+    <img
+      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{
+        detail_arr.id
+      }}.svg"
+      alt=""
+      style="width: 40%"
+    />
+    <div
+      style="
+        display: flex;
+        position: absolute;
+        left: 10%;
+        bottom: 30%;
+        width: 20%;
+        justify-content: space-between;
+      "
+    >
+      <div
+        *ngIf="type_arr"
+        style="
+          background-color: rgb(27, 236, 20);
+          border-radius: 10px;
+          width: 40%;
+          text-align: center;
+        "
+      >
+        <h2 style="color: white">{{ type_arr.name }}</h2>
+      </div>
+      <div
+        *ngIf="type_arr1"
+        style="
+          background-color: rgb(132, 0, 247);
+          border-radius: 10px;
+          width: 40%;
+          text-align: center;
+        "
+      >
+        <h2 style="color: white">{{ type_arr1.name }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div
+    style="
+      justify-content: space-between;
+      display: flex;
+      width: 40%;
+      margin-left: 50px;
+      position: absolute;
+      top: 75%;
+    "
+  >
+    <h2 style="text-align: center">
+      Altura
+      <h6>{{ detail_arr.height }}</h6>
+    </h2>
+
+    <h2 style="text-align: center">
+      Peso
+      <h6>{{ detail_arr.weight }}KG</h6>
+    </h2>
+  </div>
+
+  <div *ngIf="stats_arr" style="height: 300px; display: flex">
+    <h1 style="margin-top: 120px">Estadisticas</h1>
+    <div style="border: 1px solid #111; width: 100%">
+      <div
+        style="
+          border: 1px SOLID #111;
+          justify-content: space-between;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <h3 style="width: 10%">{{ stats_arr[0].stat.name }}</h3>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 80%; height: 30px; background-color: #0aaa5a"
+        >
+          <div class="" style="width: 100%"></div>
+        </div>
+
+        <h3>{{ stats_arr[0].base_stat }}</h3>
+      </div>
+      <div
+        style="
+          border: 1px SOLID #111;
+          justify-content: space-between;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <h3 style="width: 10%">{{ stats_arr[1].stat.name }}</h3>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 80%; height: 30px; background-color: #0aaa5a"
+        >
+          <div class="" style="width: 100%"></div>
+        </div>
+
+        <h3>{{ stats_arr[1].base_stat }}</h3>
+      </div>
+      <div
+        style="
+          border: 1px SOLID #111;
+          justify-content: space-between;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <h3 style="width: 10%">{{ stats_arr[2].stat.name }}</h3>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 80%; height: 30px; background-color: #0aaa5a"
+        >
+          <div class="" style="width: 100%"></div>
+        </div>
+
+        <h3>{{ stats_arr[2].base_stat }}</h3>
+      </div>
+      <div
+        style="
+          border: 1px SOLID #111;
+          justify-content: space-between;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <h3 style="width: 10%">{{ stats_arr[3].stat.name }}</h3>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 80%; height: 30px; background-color: #0aaa5a"
+        >
+          <div class="" style="width: 100%"></div>
+        </div>
+
+        <h3>{{ stats_arr[3].base_stat }}</h3>
+      </div>
+      <div
+        style="
+          border: 1px SOLID #111;
+          justify-content: space-between;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <h3 style="width: 10%">{{ stats_arr[4].stat.name }}</h3>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 80%; height: 30px; background-color: #0aaa5a"
+        >
+          <div class="" style="width: 100%"></div>
+        </div>
+
+        <h3>{{ stats_arr[4].base_stat }}</h3>
+      </div>
+      <div
+        style="
+          border: 1px SOLID #111;
+          justify-content: space-between;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <h3 style="width: 10%">{{ stats_arr[5].stat.name }}</h3>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Basic example"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 80%; height: 30px; background-color: #0aaa5a"
+        >
+          <div class="" style="width: 100%"></div>
+        </div>
+
+        <h3>{{ stats_arr[5].base_stat }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

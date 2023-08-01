@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       console.log(this.pokemons);
     });
   }
-
+  
   nextPage() {
     this.page += 20;
   }
