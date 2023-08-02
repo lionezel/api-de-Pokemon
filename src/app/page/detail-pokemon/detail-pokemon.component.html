@@ -1,6 +1,6 @@
 <p>detail-pokemon works!</p>
 
-<div class="container" *ngIf="detail_arr" style="border: 1px solid #111">
+<div class="container" *ngIf="detail_arr">
   <h3 style="font-size: 200px; font-weight: 800; color: #91baab">
     #{{ detail_arr.id }}
   </h3>
@@ -70,11 +70,10 @@
   </div>
 
   <div *ngIf="stats_arr" style="height: 300px; display: flex">
-    <h1 style="margin-top: 120px">Estadisticas</h1>
-    <div style="border: 1px solid #111; width: 100%">
+    <h2 style="margin-top: 120px; margin-right: 50px">Estadisticas</h2>
+    <div style="width: 100%">
       <div
         style="
-          border: 1px SOLID #111;
           justify-content: space-between;
           width: 100%;
           height: 50px;
@@ -82,24 +81,17 @@
           align-items: center;
         "
       >
-        <h3 style="width: 10%">{{ stats_arr[0].stat.name }}</h3>
-        <div
-          class="progress"
-          role="progressbar"
-          aria-label="Basic example"
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="width: 80%; height: 30px; background-color: #0aaa5a"
-        >
-          <div class="" style="width: 100%"></div>
-        </div>
+        <h5 style="width: 10%; text-align: center">
+          {{ stats_arr[0].stat.name }}
+        </h5>
+        <app-progress-bar style="width: 80%"></app-progress-bar>
 
-        <h3>{{ stats_arr[0].base_stat }}</h3>
+        <h5 style="text-align: center; margin-right: 15px">
+          {{ stats_arr[0].base_stat }}
+        </h5>
       </div>
       <div
         style="
-          border: 1px SOLID #111;
           justify-content: space-between;
           width: 100%;
           height: 50px;
@@ -107,24 +99,16 @@
           align-items: center;
         "
       >
-        <h3 style="width: 10%">{{ stats_arr[1].stat.name }}</h3>
-        <div
-          class="progress"
-          role="progressbar"
-          aria-label="Basic example"
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="width: 80%; height: 30px; background-color: #0aaa5a"
-        >
-          <div class="" style="width: 100%"></div>
-        </div>
+        <h5 style="width: 10%; text-align: center">
+          {{ stats_arr[1].stat.name }}
+        </h5>
 
-        <h3>{{ stats_arr[1].base_stat }}</h3>
+        <app-progress-bar style="width: 80%"></app-progress-bar>
+
+        <h5 style="margin-right: 15px">{{ stats_arr[1].base_stat }}</h5>
       </div>
       <div
         style="
-          border: 1px SOLID #111;
           justify-content: space-between;
           width: 100%;
           height: 50px;
@@ -132,24 +116,15 @@
           align-items: center;
         "
       >
-        <h3 style="width: 10%">{{ stats_arr[2].stat.name }}</h3>
-        <div
-          class="progress"
-          role="progressbar"
-          aria-label="Basic example"
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="width: 80%; height: 30px; background-color: #0aaa5a"
-        >
-          <div class="" style="width: 100%"></div>
-        </div>
+        <h5 style="width: 10%; text-align: center">
+          {{ stats_arr[2].stat.name }}
+        </h5>
+        <app-progress-bar style="width: 80%"></app-progress-bar>
 
-        <h3>{{ stats_arr[2].base_stat }}</h3>
+        <h5 style="margin-right: 15px">{{ stats_arr[2].base_stat }}</h5>
       </div>
       <div
         style="
-          border: 1px SOLID #111;
           justify-content: space-between;
           width: 100%;
           height: 50px;
@@ -157,24 +132,15 @@
           align-items: center;
         "
       >
-        <h3 style="width: 10%">{{ stats_arr[3].stat.name }}</h3>
-        <div
-          class="progress"
-          role="progressbar"
-          aria-label="Basic example"
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="width: 80%; height: 30px; background-color: #0aaa5a"
-        >
-          <div class="" style="width: 100%"></div>
-        </div>
+        <h5 style="width: 10%; text-align: center">
+          {{ stats_arr[3].stat.name }}
+        </h5>
+        <app-progress-bar style="width: 80%"></app-progress-bar>
 
-        <h3>{{ stats_arr[3].base_stat }}</h3>
+        <h5 style="margin-right: 15px">{{ stats_arr[3].base_stat }}</h5>
       </div>
       <div
         style="
-          border: 1px SOLID #111;
           justify-content: space-between;
           width: 100%;
           height: 50px;
@@ -182,24 +148,15 @@
           align-items: center;
         "
       >
-        <h3 style="width: 10%">{{ stats_arr[4].stat.name }}</h3>
-        <div
-          class="progress"
-          role="progressbar"
-          aria-label="Basic example"
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="width: 80%; height: 30px; background-color: #0aaa5a"
-        >
-          <div class="" style="width: 100%"></div>
-        </div>
+        <h5 style="width: 10%; text-align: center">
+          {{ stats_arr[4].stat.name }}
+        </h5>
+        <app-progress-bar style="width: 80%"></app-progress-bar>
 
-        <h3>{{ stats_arr[4].base_stat }}</h3>
+        <h5 style="margin-right: 15px">{{ stats_arr[4].base_stat }}</h5>
       </div>
       <div
         style="
-          border: 1px SOLID #111;
           justify-content: space-between;
           width: 100%;
           height: 50px;
@@ -207,24 +164,13 @@
           align-items: center;
         "
       >
-        <h3 style="width: 10%">{{ stats_arr[5].stat.name }}</h3>
-        <div
-          class="progress"
-          role="progressbar"
-          aria-label="Basic example"
-          aria-valuenow="100"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="width: 80%; height: 30px; background-color: #0aaa5a"
-        >
-          <div class="" style="width: 100%"></div>
-        </div>
+        <h5 style="width: 10%; text-align: center">
+          {{ stats_arr[5].stat.name }}
+        </h5>
+        <app-progress-bar style="width: 80%"></app-progress-bar>
 
-        <h3>{{ stats_arr[5].base_stat }}</h3>
+        <h5 style="margin-right: 15px">{{ stats_arr[5].base_stat }}</h5>
       </div>
     </div>
   </div>
 </div>
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
